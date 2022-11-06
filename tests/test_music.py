@@ -14,11 +14,11 @@ class Tests:
         actual = True # the value we see in reality
         assert actual == expected, "Expected True to be equal to True!"
 
-    def test_get_music_with_author(self):
+    def test_get_music_with_artist(self):
         """
-        Test if get_music_recommendation() with a specified author gets music only from that author
+        Test if get_music_recommendation() with a specified artist gets music only from that artist
         """
-        test_author = 'Pink Floyd'
+        test_artist = 'Pink Floyd'
         for i in range(10):
-            actual = recommendations.get_music_recommendation(author=test_author).author
-            assert actual == test_author, f"Expected the music returned by get_music_recommendation(author='{test_author}') to be from {test_author}.  Instead, it returned from '{actual}'."
+            actual = recommendations.get_music_recommendation(artist=test_artist).artist
+            assert actual == test_artist, f"Expected the music returned by get_music_recommendation(artist='{test_artist}') to be from {test_artist}.  Instead, it returned from '{actual}'."
