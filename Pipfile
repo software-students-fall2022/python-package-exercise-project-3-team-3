@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyrecommendg3 = {editable = true, path = "."}
+pytest = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

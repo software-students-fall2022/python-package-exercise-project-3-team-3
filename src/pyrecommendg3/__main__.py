@@ -1,4 +1,4 @@
-import recommendations
+from pyrecommendg3 import recommendations
 
 def main():
   print(recommendations.get_music_recommendation(artist="Taylor Swift"))
