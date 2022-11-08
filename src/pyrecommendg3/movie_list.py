@@ -6,7 +6,7 @@ movie_list = [
         'year': 2009,
         'leading_actor': {'Sam Worthington','Zoe Saldana'},
         'genre':{'action','adventure','fantasy','science fiction','mystery'},
-        'rating': 'pg-13'
+        'rating': 'PG-13'
     },
     {
         'title': 'Titanic',
@@ -14,7 +14,7 @@ movie_list = [
         'year': 1997,
         'leading_actor': {'Leonardo Dicaprio','Kate Winslet'},
         'genre':{'romance','disaster','drama','historical drama'},
-        'rating': 'pg-13'
+        'rating': 'PG-13'
     },
     {
         'title': 'The Wolf of Wall Street',
@@ -22,7 +22,7 @@ movie_list = [
         'year': 2013,
         'leading_actor': {'Leonardo Dicaprio'},
         'genre': {'comedy','dark comedy','drama','crime fiction'},
-        'rating': 'r'
+        'rating': 'R'
 
     },
     {
@@ -31,7 +31,7 @@ movie_list = [
         'year': 2022,
         'leading_actor': {'Robert Pattinson', 'Zoe Kravitz'},
         'genre': {'action','superhero','adventure','crime','mystery','drama'},
-        'rating': 'pg-13'
+        'rating': 'PG-13'
     },
     {
         'title': "Harry Potter and the Sorcerer's Stone",
@@ -39,7 +39,7 @@ movie_list = [
         'year': 2001,
         'leading_actor': {'Daniel Radcliffe', 'Emma Watson', 'Rupert Grint'},
         'genre': {"children's film",'adventure','fantasy','narrative'},
-        'rating': 'pg'
+        'rating': 'PG'
     },
     {
         'title': "Harry Potter and the Chamber of Secrets",
@@ -47,7 +47,7 @@ movie_list = [
         'year': 2002,
         'leading_actor': {'daniel radcliffe', 'emma watson', 'rupert grint'},
         'genre': {"children's film",'adventure','fantasy','mystery'},
-        'rating': 'pg'
+        'rating': 'PG'
     }
 
 

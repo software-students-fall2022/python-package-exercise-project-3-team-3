@@ -16,7 +16,7 @@ class Tests:
         assert actual == expected, "Expected True to be equal to True!"
 
     # Works with no Parameters
-    def test_get_movie():
+    def test_get_movie(self):
         """
         Test if get_movie_recommendation() returns a movie in the list
         """
@@ -38,7 +38,7 @@ class Tests:
         Test if get_movie_recommendation() with specified actor gets movies only starring that actor
         """
         test_actor = 'Leonardo DiCaprio'
-        actual = recommendations.get_movie_recommendation(actor=test_actor)['leading_actor']
+        actual = recommendations.get_movie_recommendation(leading_actor=test_actor)['leading_actor']
         assert actual == test_actor, f"Expected the movie returned by get_movie_recommendation(leading_actor='{test_actor}') to be a movie starring {test_actor}. Instead, it returned '{actual}'."
 
     def test_get_movie_with_genre(self):
@@ -46,7 +46,7 @@ class Tests:
         Test if get_movie_recommendation() with specified genre gets movies only from that genre
         """
         test_genre = 'fantasy'
-        actual = recommendations.get_movie_recommendation(director=test_genre)['genre']
+        actual = recommendations.get_movie_recommendation(genre=test_genre)['genre']
         assert actual == test_genre, f"Expected the movie returned by get_movie_recommendation(genre='{test_genre}') to be from {test_genre} genre. Instead, it returned '{actual}'."
     
     def test_get_movie_with_year(self):

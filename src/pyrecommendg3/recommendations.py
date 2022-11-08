@@ -52,7 +52,7 @@ def get_movie_recommendation(director=None, leading_actor=None, year=None, genre
     if rating is not None:
         if type(rating) is not str:
             raise TypeError(f'Expected rating to be of type string, instead it was of type {type(rating)}')   
-        filtered_list = list(filter(lambda movie: rating.lower() == movie['rating'], filtered_list))
+        filtered_list = list(filter(lambda movie: rating.lower() == movie['rating'].lower(), filtered_list))
         
     if len(filtered_list) == 0:
         no_movies = (f"No movies{' directed by '+ director if director else ''}{' starring ' + leading_actor if leading_actor else ''}"
