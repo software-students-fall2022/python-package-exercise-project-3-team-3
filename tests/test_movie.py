@@ -31,7 +31,7 @@ class Tests:
         """
         test_director = 'James Cameron'
         actual = recommendations.get_movie_recommendation(director=test_director)['director']
-        assert actual == test_director, f"Expected the movie returned by get_movie_recommendation(director='{test_director}') to be a movie directer by {test_director}. Instead, it returned '{actual}'."
+        assert actual.lower() == test_director.lower(), f"Expected the movie returned by get_movie_recommendation(director='{test_director}') to be a movie directer by {test_director}. Instead, it returned '{actual}'."
     
     def test_get_movie_with_actor(self):
         """
@@ -39,7 +39,7 @@ class Tests:
         """
         test_actor = 'Leonardo DiCaprio'
         actual = recommendations.get_movie_recommendation(leading_actor=test_actor)['leading_actor']
-        assert actual == test_actor, f"Expected the movie returned by get_movie_recommendation(leading_actor='{test_actor}') to be a movie starring {test_actor}. Instead, it returned '{actual}'."
+        assert any(a.lower() == test_actor.lower() for a in actual), f"Expected the movie returned by get_movie_recommendation(leading_actor='{test_actor}') to be a movie starring {test_actor}. Instead, it returned '{actual}'."
 
     def test_get_movie_with_genre(self):
         """
@@ -47,7 +47,7 @@ class Tests:
         """
         test_genre = 'fantasy'
         actual = recommendations.get_movie_recommendation(genre=test_genre)['genre']
-        assert actual == test_genre, f"Expected the movie returned by get_movie_recommendation(genre='{test_genre}') to be from {test_genre} genre. Instead, it returned '{actual}'."
+        assert any(g.lower() == test_genre.lower() for g in actual), f"Expected the movie returned by get_movie_recommendation(genre='{test_genre}') to be from {test_genre} genre. Instead, it returned '{actual}'."
     
     def test_get_movie_with_year(self):
         """
