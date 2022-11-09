@@ -61,7 +61,7 @@ class Tests:
         test_cuisine = 'Antartican'
         for i in range(10):
             actual = recommendations.get_food_recommendation(cuisine=test_cuisine)
-            assert actual == f'No dish of {test_cuisine} cuisine found.\n', f"Expected no dish of the {test_cuisine} cuisine to be found, instead it returned: {actual}"
+            assert actual == f'No dish from {test_cuisine} cuisine found.\n', f"Expected no dish of the {test_cuisine} cuisine to be found, instead it returned: {actual}"
 
     def test_get_food_with_cuisine_and_allergen(self):
         """
