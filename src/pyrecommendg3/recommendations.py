@@ -2,6 +2,7 @@ import random
 
 from .music_list import music_list
 from .movie_list import movie_list
+from .food_list import food_list
 
 def __to_string(dictionary):
     string = ""
@@ -63,20 +64,40 @@ def get_movie_recommendation(director=None, leading_actor=None, year=None, genre
     movie = random.choice(filtered_list)
     return movie
 
-def view_all(category=None):
-    filtered_list = None
-    if category.lower() == "music":
-        filtered_list = music_list
-        test1 = filtered_list[0]
 
-    elif category.lower() == "movie":
-        filtered_list = movie_list
+def get_food_recommendation(cuisine=None, allergen=None):
+    filtered_list = food_list
+    if cuisine is not None:
+        if type(cuisine) is not str:
+            raise TypeError(f'Expected cuisine to be of type string, instead it was of type {type(cuisine)}')
+        filtered_list = list(filter(lambda food: food['cuisine'].lower() == cuisine.lower(), filtered_list))
+    if allergen is not None:
+        if type(allergen) is not str:
+            raise TypeError(f'Expected allergen to be of type string, instead if was of type {type(allergen)}')
+        filtered_list = list(filter(lambda food: allergen != food['allergen'], filtered_list))
+    if len(filtered_list) == 0:
+        return f"No dish{' from '+ cuisine +' cuisine' if cuisine else ''}{' without ' + allergen + ' allergen' if allergen else ''} found.\n"
+    
+    food = random.choice(filtered_list)
+    return food
 
-    print(f"=========================== All {category} ===========================")
-    print(filtered_list)
-    print(type(filtered_list))
-    print(type(filtered_list[0]))
+# def view_all(category=None):
+#     filtered_list = None
+#     if category.lower() == "music":
+#         filtered_list = music_list
+#         for music in filtered_list:
+#             for info in music:
+#                 print(f"{info}: {music[info]}")
 
+#     elif category.lower() == "movie":
+#         filtered_list = movie_list
+    
+#     elif category.lower() == "food":
+#         filtered_list = food_list
+
+#     # print(f"=========================== All {category} ===========================")
+#     # print(filtered_list)
+#     # print(type(filtered_list))
 
 def get():
     return "Success"
