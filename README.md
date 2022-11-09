@@ -17,12 +17,12 @@ Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 
 ## Installation
 
-- Install using `pip`
+- Create a `pipenv`-managed virtual environment and install the latest version of the package installed:
 
 - Run the following command to install the lastest version of the package:
 
   ```bash
-  pip install -i https://test.pypi.org/simple/ pyrecommendg3
+  pipenv install -i https://test.pypi.org/simple/ pyrecommendg3
   ```
 
 ## Running package directly from the command line
