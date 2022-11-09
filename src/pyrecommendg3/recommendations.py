@@ -63,6 +63,21 @@ def get_movie_recommendation(director=None, leading_actor=None, year=None, genre
     movie = random.choice(filtered_list)
     return movie
 
+def view_all(category=None):
+    filtered_list = None
+    if category.lower() == "music":
+        filtered_list = music_list
+        test1 = filtered_list[0]
+
+    elif category.lower() == "movie":
+        filtered_list = movie_list
+
+    print(f"=========================== All {category} ===========================")
+    print(filtered_list)
+    print(type(filtered_list))
+    print(type(filtered_list[0]))
+
+
 def get():
     return "Success"
     
