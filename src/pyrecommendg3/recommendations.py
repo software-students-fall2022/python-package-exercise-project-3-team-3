@@ -53,6 +53,7 @@ def get_movie_recommendation(director=None, genre=None, rating=None):
     movie = random.choice(filtered_list)
     return movie
 
+
 def get_food_recommendation(cuisine=None, allergen=None):
     filtered_list = food_list
     if cuisine is not None:
@@ -68,7 +69,40 @@ def get_food_recommendation(cuisine=None, allergen=None):
     
     food = random.choice(filtered_list)
     return food
+
+def view_all(category=None):
+
+    if category is not None:
+        if type(category) is not str:
+            raise TypeError(f"Expected category to be of type string, instead it was of type {type(category)}")
+        if category.lower() != "music":
+            if category.lower() != "movie":
+                if category.lower() != "food":
+                    return "incorrect"
+    print(f"=========================== All {category} ===========================")
+    if category.lower() == "music":
+        for music in music_list:
+            for info in music:
+                if music[info] != "":
+                    print(f"{info}: {music[info]}")
+            print()
+
+    elif category.lower() == "movie":
+        for movie in movie_list:
+            for info in movie:
+                print(f"{info}: {movie[info]}")
+            print()
     
+    elif category.lower() == "food":
+        for food in food_list:
+            for info in food:
+                if info == "allergen" and food[info] == "":
+                    print(f"{info}: N/A")
+                else:
+                    print(f"{info}: {food[info]}")
+            print()
+    return category
+
 def get():
     return "Success"
     
