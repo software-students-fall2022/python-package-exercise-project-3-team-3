@@ -11,7 +11,7 @@ Adam Sidibe ([Sidibee](https://github.com/sidibee))
 
 Rachel Andhol ([rachel0lehcar](https://github.com/rachel0lehcar))
 
-Manny Soto Cruz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
+Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 
 
 A little exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
