@@ -69,7 +69,7 @@ def get_food_recommendation(cuisine=None, allergen=None):
     if cuisine is not None:
         if type(cuisine) is not str:
             raise TypeError(f'Expected cuisine to be of type string, instead it was of type {type(cuisine)}')
-        filtered_list = list(filter(lambda food: any(m.lower() == cuisine.lower() for m in food['cuisine']), filtered_list))
+        filtered_list = list(filter(lambda food: food['cuisine'].lower() == cuisine.lower(), filtered_list))
     if allergen is not None:
         if type(allergen) is not str:
             raise TypeError(f'Expected allergen to be of type string, instead if was of type {type(allergen)}')
