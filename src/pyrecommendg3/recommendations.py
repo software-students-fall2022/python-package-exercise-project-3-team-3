@@ -75,7 +75,7 @@ def get_food_recommendation(cuisine=None, allergen=None):
             raise TypeError(f'Expected allergen to be of type string, instead if was of type {type(allergen)}')
         filtered_list = list(filter(lambda food: allergen != food['allergen'], filtered_list))
     if len(filtered_list) == 0:
-        return f"No dishes{' from cuisine '+ cuisine if cuisine else ''}{' without ' + allergen + ' allergen' if allergen else ''} found.\n"
+        return f"No dish{' from '+ cuisine +' cuisine' if cuisine else ''}{' without ' + allergen + ' allergen' if allergen else ''} found.\n"
     
     food = random.choice(filtered_list)
     return food

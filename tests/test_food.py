@@ -52,4 +52,23 @@ class Tests:
         Test if get_food_recommendation() with wrong allergen parameter type returns an error
         """
         with pytest.raises(TypeError):
-            recommendations.get_music_recommendation(allergen=['test'])
+            recommendations.get_food_recommendation(allergen=['test'])
+
+    def test_get_food_with_cuisine_not_found(self):
+        """
+        Test if get_cuisine_recommendation() with a cuisine not in the list returns an error message
+        """
+        test_cuisine = 'Antartican'
+        for i in range(10):
+            actual = recommendations.get_food_recommendation(cuisine=test_cuisine)
+            assert actual == f'No dish from {test_cuisine} cuisine found.\n', f"Expected no dish of the {test_cuisine} cuisine to be found, instead it returned: {actual}"
+
+    def test_get_food_with_cuisine_and_allergen(self):
+        """
+        Test if get_food_recommendation() with a specified artist and genre gets music only from that artist and genre
+        """
+        test_cuisine = 'Japanese'
+        test_allergen = 'Fish'
+        for i in range(10):
+            food = recommendations.get_food_recommendation(cuisine=test_cuisine, allergen=test_allergen)
+            assert food['cuisine'] == test_cuisine and food['allergen'] != test_allergen, f"Expected the food returned by get_food_recommendation(cuisine='{test_cuisine}', allergen='{test_allergen}') to be from {test_cuisine} cuisine and without {test_allergen} allergen. Instead, it returned from '{food['cuisine']}' with the '{food['allergen']}' allergen."
