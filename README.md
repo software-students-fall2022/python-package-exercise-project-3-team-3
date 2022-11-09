@@ -9,7 +9,7 @@ Pedro Baggio ([Jignifs](https://github.com/Jignifs))
 
 Adam Sidibe ([Sidibee](https://github.com/sidibee))
 
-Rachel Andhol ([rachel0lehcar](https://github.com/rachel0lehcar))
+Rachel Andoh ([rachel0lehcar](https://github.com/rachel0lehcar))
 
 Manny Soto Cruz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 
