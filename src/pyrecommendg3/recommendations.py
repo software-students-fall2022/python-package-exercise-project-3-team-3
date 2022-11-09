@@ -27,22 +27,12 @@ def get_music_recommendation(artist=None, genre=None):
     song = random.choice(filtered_list)
     return song
 
-def get_movie_recommendation(director=None, leading_actor=None, year=None, genre=None, rating=None):
+def get_movie_recommendation(director=None, genre=None, rating=None):
     filtered_list = movie_list
     if director is not None:
         if type(director) is not str:
-            raise TypeError(f'Expected director to be of type string, instead it was of type {type(director)}')
-        filtered_list = list(filter(lambda movie: movie['director'].lower() == director.lower(), filtered_list))
-
-    if leading_actor is not None:
-        if type(leading_actor) is not str:
-            raise TypeError(f'Expected actor to be of type string, instead it was of type {type(leading_actor)}')
-        filtered_list = list(filter(lambda movie: any(m.lower() == leading_actor.lower() for m in movie['leading_actor']), filtered_list))
-        
-    if year is not None:
-        if type(year) is not int:
-            raise TypeError(f'Expected year to be of type int, instead it was of type {type(year)}')
-        filtered_list = list(filter(lambda movie: year == movie['year'], filtered_list))
+            raise TypeError(f'Expected director to be of type str, instead it was of type {type(director)}')
+        filtered_list = list(filter(lambda movie: director == movie['director'], filtered_list))
 
     if genre is not None:
         if type(genre) is not str:
@@ -55,9 +45,8 @@ def get_movie_recommendation(director=None, leading_actor=None, year=None, genre
         filtered_list = list(filter(lambda movie: rating.lower() == movie['rating'].lower(), filtered_list))
         
     if len(filtered_list) == 0:
-        no_movies = (f"No movies{' directed by '+ director if director else ''}{' starring ' + leading_actor if leading_actor else ''}"
-                    f"{' rated ' + rating if rating else ''}{' of ' + genre + ' genre' if genre else ''}"
-                    f"{' from the year ' + str(year) if year else ''} found.\n")
+        no_movies = (f"No movies{' directed by '+ director if director else ''}"
+                    f"{' rated ' + rating if rating else ''}{' of ' + genre + ' genre' if genre else ''} found.\n")
         return no_movies
 
     movie = random.choice(filtered_list)
