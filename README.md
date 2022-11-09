@@ -19,12 +19,12 @@ Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 
 ## Installation
 
-- Create a `pipenv`-managed environment.
+- Install using `pip`
 
 - Run the following command to install the lastest version of the package:
 
   ```bash
-  pipenv install -i https://test.pypi.org/simple/ pypassgen==1.0.0
+  pip install -i https://test.pypi.org/simple/ pyrecommendg3
   ```
 
 ## Running package directly from the command line
