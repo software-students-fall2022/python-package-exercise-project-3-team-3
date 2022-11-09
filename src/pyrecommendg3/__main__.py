@@ -5,11 +5,11 @@ def main():
   print(recommendations.get_music_recommendation(genre="Rock"))
   print(recommendations.get_music_recommendation())
   print()
-  print(recommendations.view_all(category="Music"))
+  recommendations.view_all(category="Music")
   print()
-  print(recommendations.view_all(category="Movie"))
+  recommendations.view_all(category="Movie")
   print()
-  print(recommendations.view_all(category="Food"))
+  recommendations.view_all(category="Food")
   
 
 

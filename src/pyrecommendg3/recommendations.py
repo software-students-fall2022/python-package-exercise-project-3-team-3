@@ -86,7 +86,10 @@ def view_all(category=None):
     if category is not None:
         if type(category) is not str:
             raise TypeError(f"Expected category to be of type string, instead it was of type {type(category)}")
-
+        if category.lower() != "music":
+            if category.lower() != "movie":
+                if category.lower() != "food":
+                    return "incorrect"
     print(f"=========================== All {category} ===========================")
     if category.lower() == "music":
         for music in music_list:
@@ -104,8 +107,12 @@ def view_all(category=None):
     elif category.lower() == "food":
         for food in food_list:
             for info in food:
-                print(f"{info}: {food[info]}")
+                if info == "allergen" and food[info] == "":
+                    print(f"{info}: N/A")
+                else:
+                    print(f"{info}: {food[info]}")
             print()
+    return category
 
 def get():
     return "Success"
