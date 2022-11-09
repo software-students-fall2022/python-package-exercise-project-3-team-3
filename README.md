@@ -5,7 +5,10 @@
 ![Python build & test](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-3/actions/workflows/build.yaml/badge.svg)
 
 ## Team members
-Pedro Baggio ([Jignifs](https://github.com/Jignifs)) \
+Pedro Baggio ([Jignifs](https://github.com/Jignifs))
+Adam Sidibe ([Sidibee](https://github.com/sidibee))
+Rachel Andhol [rachel0lehcar](https://github.com/rachel0lehcar))
+Manny Soto Cruz \
 
 
 A little exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
