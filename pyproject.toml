@@ -9,7 +9,7 @@ version = "0.0.1"
 authors = [
   { name="Pedro Baggio", email="pdb323@nyu.edu" },
   { name="Adam Sidibe", email="as12225@nyu.edu"},
-  { name="Manny Soto Ruiz", email="esr370@nyu.edu},
+  { name="Manny Soto Ruiz", email="esr370@nyu.edu"},
   { name="Rachel Andoh", email="raa563@nyu.edu"},
 ]
 license = { file = "LICENSE" }
