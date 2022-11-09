@@ -4,9 +4,9 @@ def main():
 
   print("Welcome to the pyrecommendg3")
   while (True):
-    print("1. Get music recommendation")
-    print("2. Get movie recommendation")
-    print("3. Get food recommendation")
+    print("1. Get random music recommendation")
+    print("2. Get random movie recommendation")
+    print("3. Get random food recommendation")
     print("4. View all recommendations")
     print("5. Exit")
 

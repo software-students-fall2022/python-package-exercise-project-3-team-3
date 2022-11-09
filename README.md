@@ -40,11 +40,99 @@ Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
   - This will initialize the package and prompt the user to choose their desired function.
 
     ```bash
-    Welcome to pypassgen - your simple and lightweight password generator!
-    1. Generate a password
-    2. Verify a password
-    3. Encrypt a phrase
-    4. Decrypt an encrypted phrase
+    Welcome to pyrecommendg3
+    1. Get random music recommendation
+    2. Get random movie recommendation
+    3. Get random food recommendation
+    4. View all recommendations
     5. Exit
     Enter your choice (1 - 5):
     ```
+
+- **_Get music recommendation:_**
+
+  - When prompted, enter `1` to get a random music recommendation.
+
+  - User will be given a random music recommendation.
+
+- **_Get movie recommendation:_**
+
+  - When prompted, enter `2` to get a random movie recommendation.
+
+  - User will be given a ranom movie recommendation
+
+- **_Get food recommendation:_**
+
+  - When prompted, enter `3` to get a random food recommendation.
+
+  - User will be given a random food recommendation
+
+- **_View all recommendations:_**
+
+  - When prompted, enter `4` to view all recommendations menu.
+
+  - Enter the category that you want to see.
+  
+  - User will be shown all recommendations for the category they want.
+
+## Using the package as a module in a Python project
+
+- Activate the virtual environment after installing the package:
+
+  ```python
+  pipenv shell
+  ```
+
+- Create a Python program that imports the package and its functions:
+
+  ```python
+  from pyrecommendg3 import recommendations
+  ```
+
+### Functions
+
+- **_Get a music recommendation:_**
+
+  - Call the `get_music_recommendation` function and pass the artist and genre to get a random music recommendation with those arguments. The function could also take no arguments to get a random music with any artisit and genre.
+
+    For example:
+
+    ```python
+    # in your project
+    music = recommendations.get_music_recommendation()
+    ```
+
+- **_Get a movie recommendation:_**
+
+  - Call the `get_movie_recommendation` function and pass the director, genre and rating to get a random movie recommendation with those arguments. The function could also take no arguments to get a random movie with any director, genre and rating.
+
+    For example:
+
+    ```python
+    # in your project
+    movie = recommendations.get_movie_recommendation()
+    ```
+
+- **_Get a food recommendation:_**
+
+  - Call the `get_food_recommendation` function and pass the cuisine and allergen to get a random food recommendation with those arguments. The function could also take no arguments to get a random food with any cuisine and allergen.
+
+    For example:
+
+    ```python
+    # in your project
+    food = recommendations.get_food_recommendation()
+    ```
+
+- **_View all recommendations:_**
+
+  - Call the `view_all` function and pass a category string as argument
+
+    For example:
+
+    ```python
+    # in your project
+    recommendations.view_all(category="Music")
+    ```
+## PyPI link to package
+<https://test.pypi.org/project/pyrecommendg3/>
