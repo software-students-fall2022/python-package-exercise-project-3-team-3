@@ -17,27 +17,27 @@ food_list= [
     {
         'dish': 'Burger',
         'cuisine': 'American',
-        'allergen': 'None'
+        'allergen': ''
     },
     {
         'dish': 'Hot Dog',
         'cuisine': 'American',
-        'allergen': 'None'
+        'allergen': ''
     },
     {
         'dish': 'Fried Chicken',
         'cuisine': 'American',
-        'allergen': 'Fish'
+        'allergen': ''
     },
     {
         'dish': 'Korean Fried Chicken',
         'cuisine': 'Korean',
-        'allergen': 'None'
+        'allergen': ''
     },
     {
         'dish': 'Pecking Duck',
         'cuisine': 'Chinese',
-        'allergen': 'None'
+        'allergen': ''
     },
     {
         'dish': 'Seafood Boil',
@@ -47,17 +47,17 @@ food_list= [
     {
         'dish': 'Pho',
         'cuisine': 'Vietnamese',
-        'allergen': 'None'
+        'allergen': ''
     },
     {
         'dish': 'Tacos',
         'cuisine': 'Mexican',
-        'allergen': 'None'
+        'allergen': ''
     },    
     {
         'dish': 'Penang assam laksa',
         'cuisine': 'Malaysian',
-        'allergen': 'None'
+        'allergen': ''
     },
     {
         'dish': 'Poke',
@@ -82,6 +82,6 @@ food_list= [
     {
         'dish': 'Yakitori',
         'cuisine': 'Japanese',
-        'allergen': 'None'
+        'allergen': ''
     },                      
 ]
