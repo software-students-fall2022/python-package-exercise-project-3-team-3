@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyrecommendg3"
 description = "A python package to get movie, song, and food recommendations."
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Pedro Baggio", email="pdb323@nyu.edu" },
   { name="Adam Sidibe", email="as12225@nyu.edu"},

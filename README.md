@@ -1,5 +1,3 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9088947&assignment_repo_type=AssignmentRepo)
-
 ![Python build & test](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-3/actions/workflows/build.yaml/badge.svg)
 
 # Python *`pyrecommendg3`* Package
@@ -94,6 +92,11 @@ Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 - **_Get a music recommendation:_**
 
   - Call the `get_music_recommendation` function and pass the artist and genre to get a random music recommendation with those arguments. The function could also take no arguments to get a random music with any artisit and genre.
+  
+    | Parameters      | Description |
+    | ------- | ------------- |
+    | **artist : *str, default: None*** | Specifies the artist you want to get the music recommendation from. If not specified, will get from all artists.
+    | **genre : *str, default: None***   | Specifies the genre of the recommended music. If not specified, will get from all genres.        |
 
     For example:
 
@@ -106,6 +109,12 @@ Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 
   - Call the `get_movie_recommendation` function and pass the director, genre and rating to get a random movie recommendation with those arguments. The function could also take no arguments to get a random movie with any director, genre and rating.
 
+    | Parameters      | Description |
+    | ------- | ------------- |
+    | **director : *str, default: None*** | Specifies the director you want to get the movie recommendation from. If not specified, will get from all movie directors.
+    | **genre : *str, default: None***   | Specifies the genre of the recommended movie. If not specified, will get from all genres.        |
+    | **rating : *str, default: None***   | Specifies the rating (PG, PG-13, etc.) of the recommended movie. If not specified, will get from all ratings.        |
+
     For example:
 
     ```python
@@ -117,16 +126,25 @@ Manny Soto Ruiz ([MannySotoRuiz](https://github.com/MannySotoRuiz))
 
   - Call the `get_food_recommendation` function and pass the cuisine and allergen to get a random food recommendation with those arguments. The function could also take no arguments to get a random food with any cuisine and allergen.
 
+    | Parameters      | Description |
+    | ------- | ------------- |
+    | **cuisine : *str, default: None*** | Specifies the cuisine of the recommended dish. If not specified, will get from all cuisines.
+    | **allergen : *str, default: None***   | If specified, will only return dish recommendations without the specified allergen.      |
+
     For example:
 
     ```python
     # in your project
-    food = recommendations.get_food_recommendation()
+    food = recommendations.get_food_recommendation(cuisine='Japanese', allergen='Fish')
     ```
 
 - **_View all recommendations:_**
 
   - Call the `view_all` function and pass a category string as argument
+
+    | Parameters      | Description |
+    | ------- | ------------- |
+    | **category : *str, required*** | Specifies the category you want to view all recommendations from. Must be one of ['music', 'food', 'movie']|
 
     For example:
 

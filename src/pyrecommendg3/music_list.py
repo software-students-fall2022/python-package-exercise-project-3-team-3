@@ -35,8 +35,8 @@ music_list = [
         'genre': "Rock"
     },
     {
-        'title': "",
-        'artist': "",
-        'genre': ""
+        'title': "I'm Good (Blue)",
+        'artist': "David Guetta",
+        'genre': "Electronic"
     },
 ]
