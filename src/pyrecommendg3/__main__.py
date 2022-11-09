@@ -8,6 +8,8 @@ def main():
   print(recommendations.view_all(category="Music"))
   print()
   print(recommendations.view_all(category="Movie"))
+  print()
+  print(recommendations.view_all(category="Food"))
   
 
 
