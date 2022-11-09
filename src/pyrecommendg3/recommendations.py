@@ -64,7 +64,7 @@ def get_movie_recommendation(director=None, leading_actor=None, year=None, genre
     movie = random.choice(filtered_list)
     return movie
 
-def get_food_recommendation(dish=None, cuisine=None, allergen=None):
+def get_food_recommendation(cuisine=None, allergen=None):
     filtered_list = food_list
     if cuisine is not None:
         if type(cuisine) is not str:
