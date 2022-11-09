@@ -2,6 +2,7 @@ import random
 
 from .music_list import music_list
 from .movie_list import movie_list
+from .food_list import food_list
 
 def __to_string(dictionary):
     string = ""
@@ -52,6 +53,22 @@ def get_movie_recommendation(director=None, genre=None, rating=None):
     movie = random.choice(filtered_list)
     return movie
 
+def get_food_recommendation(cuisine=None, allergen=None):
+    filtered_list = food_list
+    if cuisine is not None:
+        if type(cuisine) is not str:
+            raise TypeError(f'Expected cuisine to be of type string, instead it was of type {type(cuisine)}')
+        filtered_list = list(filter(lambda food: food['cuisine'].lower() == cuisine.lower(), filtered_list))
+    if allergen is not None:
+        if type(allergen) is not str:
+            raise TypeError(f'Expected allergen to be of type string, instead if was of type {type(allergen)}')
+        filtered_list = list(filter(lambda food: allergen != food['allergen'], filtered_list))
+    if len(filtered_list) == 0:
+        return f"No dish{' from '+ cuisine +' cuisine' if cuisine else ''}{' without ' + allergen + ' allergen' if allergen else ''} found.\n"
+    
+    food = random.choice(filtered_list)
+    return food
+    
 def get():
     return "Success"
     
