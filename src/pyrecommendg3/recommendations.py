@@ -33,7 +33,7 @@ def get_movie_recommendation(director=None, genre=None, rating=None):
     if director is not None:
         if type(director) is not str:
             raise TypeError(f'Expected director to be of type str, instead it was of type {type(director)}')
-        filtered_list = list(filter(lambda movie: director == movie['director'], filtered_list))
+        filtered_list = list(filter(lambda movie: director.lower() == movie['director'].lower(), filtered_list))
 
     if genre is not None:
         if type(genre) is not str:

@@ -29,7 +29,7 @@ class Tests:
         """
         Test if get_movie_recommendation() with specified genre gets movies only from that genre
         """
-        test_genre = 'fantasy'
+        test_genre = 'Fantasy'
         actual = recommendations.get_movie_recommendation(genre=test_genre)['genre']
         assert any(g.lower() == test_genre.lower() for g in actual), f"Expected the movie returned by get_movie_recommendation(genre='{test_genre}') to be from {test_genre} genre. Instead, it returned '{actual}'."
     
@@ -37,17 +37,17 @@ class Tests:
         """
         Test if get_movie_recommendation() with specified director gets movies only from that director
         """
-        test_director = "James Cameron"
+        test_director = "James cameron"
         actual = recommendations.get_movie_recommendation(director=test_director)['director']
-        assert actual == test_director, f"Expected the movie returned by get_movie_recommendation(director='{test_director}') to be directed by {test_director}. Instead, it returned '{actual}'."
+        assert actual.lower() == test_director.lower(), f"Expected the movie returned by get_movie_recommendation(director='{test_director}') to be directed by {test_director}. Instead, it returned '{actual}'."
     
     def test_get_movie_with_rating(self):
         """
         Test if get_movie_recommendation() with specified rating gets movies only with that rating
         """
-        test_rating = 'PG-13'
+        test_rating = 'Pg-13'
         actual = recommendations.get_movie_recommendation(rating=test_rating)['rating']
-        assert actual == test_rating, f"Expected the movie returned by get_movie_recommendation(rating='{test_rating}') to be rated {test_rating}. Instead, it returned '{actual}'."
+        assert actual.lower() == test_rating.lower(), f"Expected the movie returned by get_movie_recommendation(rating='{test_rating}') to be rated {test_rating}. Instead, it returned '{actual}'."
 
     # Not Found
     def test_get_movie_with_genre_not_found(self):
@@ -92,8 +92,8 @@ class Tests:
         """
         Test if get_movie_recommendation() with a specified director and genre gets movies only from that director and genre
         """
-        test_director = "Chris Columbus"
-        test_genre = "fantasy"
+        test_director = "ChriS Columbus"
+        test_genre = "Fantasy"
         for i in range(10):
             movie = recommendations.get_movie_recommendation(director=test_director, genre=test_genre)
             assert movie['director'].lower() == test_director.lower() and any(g.lower() == test_genre.lower() for g in movie['genre']), f"Expected the movie returned by get_movie_recommendation(director='{test_director}', genre='{test_genre}') to be from the {test_genre} genre and directed by {test_director}. Instead, it returned from '{movie['director']}' from the following genres '{movie['genre']}'."
@@ -102,18 +102,18 @@ class Tests:
         """
         Test if get_movie_recommendation() with a specified director and rating gets movies only from that director and rating
         """
-        test_director = "Chris Columbus"
-        test_rating = "PG"
+        test_director = "chris Columbus"
+        test_rating = "Pg"
         for i in range(10):
             movie = recommendations.get_movie_recommendation(director=test_director, rating=test_rating)
-            assert movie['director'] == test_director and movie['rating'].lower() == test_rating.lower(), f"Expected the movie returned by get_movie_recommendation(director='{test_director}', rating='{test_rating}') to be rated {test_rating}  and directed by {test_director}. Instead, it returned from '{movie['rating']}' rated '{movie['director']}'."
+            assert movie['director'].lower() == test_director.lower() and movie['rating'].lower() == test_rating.lower(), f"Expected the movie returned by get_movie_recommendation(director='{test_director}', rating='{test_rating}') to be rated {test_rating}  and directed by {test_director}. Instead, it returned from '{movie['rating']}' rated '{movie['director']}'."
 
     def test_get_movie_with_rating_and_genre(self):
         """
         Test if get_movie_recommendation() with a specified rating and genre gets movies only from that rating and genre
         """
-        test_genre = "fantasy"
-        test_rating = "PG"
+        test_genre = "Fantasy"
+        test_rating = "Pg"
         for i in range(10):
             movie = recommendations.get_movie_recommendation(genre=test_genre, rating=test_rating)
             assert movie['rating'].lower() == test_rating.lower() and any(g.lower() == test_genre.lower() for g in movie['genre']), f"Expected the movie returned by get_movie_recommendation(genre='{test_genre}', rating='{test_rating}') to be rated {test_rating}  and from the genre {test_genre}. Instead, it returned from '{movie['rating']}' from the following genres '{movie['genre']}'."
@@ -145,5 +145,3 @@ class Tests:
         test_genre = "rock"
         actual = recommendations.get_movie_recommendation(rating=test_rating, genre=test_genre)
         assert actual == f'No movies rated {test_rating} of {test_genre} genre found.\n', f"Expected no movies rated {test_rating} of genre {test_genre} to be found, instead it returned: {actual}"
-
-    
