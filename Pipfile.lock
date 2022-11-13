@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7050a8db4e23f0d8a2db2d1665c8d571b55dd708034e8e4aa6d0697e17c00128"
+            "sha256": "33e8a701a553de179d7a80cf2e7718e655b0a08fbaeb170d30e5d8ad0d521a5c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -81,7 +81,7 @@
         "pyrecommendg3": {
             "editable": true,
             "path": ".",
-            "version": "==0.0.3"
+            "version": "==0.0.5"
         },
         "pytest": {
             "hashes": [
